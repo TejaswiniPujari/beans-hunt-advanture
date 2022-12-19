@@ -10,12 +10,78 @@ body {
     width: 100%;
 }
 
+.body {
+    overflow: hidden;
+}
+
+
+
+/* --------guidline modal------- */
+#modal {
+    display: none;
+    height: 100vw;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
 #guid-btn {
     position: fixed;
     top: 12vw;
     right: 0;
     height: 8vw;
     z-index: 3;
+}
+
+#guidline {
+    position: fixed;
+    top: 18vw;
+    height: 70vh;
+    background-image: url(./img/backgrounds/Leaderboard-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 10vw;
+    text-align: start;
+}
+
+ul {
+    height: 60vh;
+    overflow: scroll;
+}
+
+#close-btn {
+    height: 10vw;
+    float: right;
+    padding: 3vw;
+}
+
+/*----- gift info -----*/
+#gift-info-title {
+    text-align: center;
+    font-size: 5vw;
+    text-decoration-line: underline;
+    color: rgb(94, 2, 2);
+    margin-bottom: 5vw;
+}
+
+#gift-rewards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10vw;
+}
+
+#gift-rewards img {
+    height: 20vw;
+}
+
+#gift-info {
+    position: fixed;
+    top: 18vw;
+    height: 60vw;
+    background-image: url(./img/backgrounds/Leaderboard-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 10vw;
 }
 
 #top-action {
@@ -64,6 +130,14 @@ body {
     margin-bottom: 5vw;
 }
 
+input {
+    width: 30vw;
+    border: none;
+    color: white;
+    background: transparent;
+    outline: none;
+}
+
 .input-box {
     background-image: url(./img/backgrounds/Hammers-chances-and-left-bg.png);
     background-repeat: no-repeat;
@@ -72,6 +146,7 @@ body {
     font-size: 5vw;
     color: white;
     text-align: center;
+    width: 35vw;
 }
 
 #game {
@@ -187,19 +262,44 @@ body {
     transition: background-color 0.6s ease 0s;
 }
 
+#slider-dots {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
 .active {
     background-color: #6403039e;
 }
 
-#bean-pot {
+.bean-pot {
     background-image: url(./img/backgrounds/bg_rewards.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 35vw;
 }
 
+#reward-img {
+    height: 30vw;
+}
+
+.bean-pot-overall {
+    display: grid;
+    grid-template-columns: auto auto;
+    transform: scale(0.8);
+    column-gap: 10vw;
+}
+
 .highlite-text {
     color: #580303;
+}
+
+#reward-des {
+    font-size: 4vw;
+    width: 80vw;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 #hourly-reward-description {
@@ -225,7 +325,7 @@ body {
     min-height: 60vw;
 }
 
-#brown-strip {
+#leaderboard-strip {
     background-image: url(./img/backgrounds/brownStrip.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -240,7 +340,7 @@ body {
     font-size: 8vw;
 }
 
-#slected-btn {
+.selected-btn {
     background-image: url(./img/backgrounds/blueBtn.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
