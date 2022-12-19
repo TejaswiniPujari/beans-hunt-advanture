@@ -9,262 +9,333 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
+<html>
 
-<body>
-    <img src="./img/btn/Guide-btn.png" id="guid-btn">
-    <img src="./img/header.jpg" id="header-img">
+<body id="body">
 
-    <!------- action tab ------->
-    <div id="top-action">
-        <img src="./img/btn/Game-zone-btn.png" id="game-zone-tab" onclick="selectGameZoneTab()">
-        <img src="./img//btn/Talent-select-btn.png" id="talent-tab" class="unselect-btn" onclick="selectTalentTab()">
-    </div>
-
-    <!------- event gift banner -------->
-    <div class="event-gift remove-reward" id="talent-event-gift">
-        <div class="gift-banner">
-            <img src="./img/ribbons/Event-gift-tag.png" class="banner-tag">
-            <div id="event-gifts">
-                <div>
-                    <img src="./img/gifts/Golden-Lion.png">
-                    <div class="gift-description">Golden Lion <br />500</div>
-                </div>
-                <div>
-                    <img src="./img/gifts/White-Horse.png">
-                    <div class="gift-description">White Horse <br />25,000</div>
-                </div>
-                <div>
-                    <img src="./img/gifts/Garden-Flower.png">
-                    <div class="gift-description">Garden Flower<br /> 100,000</div>
-                </div>
+    <!------------ guidline ---------->
+    <div id="modal">
+        <img src="./img/btn/close.png" id="close-btn">
+        <div id="guidline">
+            <div style="text-align: center;">
+                <img src="./img/ribbons/Guide-tag.png" style="height: 10vw;">
             </div>
+            <ul>
+                <li>Top 16 talents have to register their ids with SK employees to participate in this event.</li>
+                <li>Talent must be level 5 or above to play this pk.</li>
+                <li>The host must invite for the 5min Pk Battle in order to compete with the opponent talent on
+                    scheduled time under Pk Kingdom feature.</li>
+                <li>More Powerful Effects will be seen with gifts that cost 5000 beans or more.</li>
+                <li>There will be 2 Rounds, talent that wins maximum points will be qualified to the final round.
+                </li>
+                <li>The winner of this tournament will be decided based on the points they receive in the Final
+                    Round.</li>
+                <li>Talents will be ranked on the leader board according to the number of points they receive in
+                    each Round.</li>
+                <li>Users will be ranked according to their spending on each round of the tournament.</li>
+                <li>If any talent's power is exhausted then the match ends automatically.</li>
+                <li>The maximum spender will be the winner of the tournament.</li>
+                <li>Rewards will be shared as per beans received.</li>
+                <li>Top winner Talent of Round 2 will be mentioned in the Banner for 3 days</li>
+                <li>ROUND 1 Total 16 talents will be participating.</li>
+                <li>FINAL ROUND: Top 10 Talents with maximum points earned will qualify for round 2 Battle.</li>
+            </ul>
         </div>
-    </div>
-    <div id="game-box">
-        <!-- timer -->
-        <div id="timer">
-            <div id="timer-description">
-                <div style="padding-top: 5vw;">POT BREAKING CEREMONY STARTS IN:<br />14:00 to 21:00 GMT</div>
-            </div>
-        </div>
-
-        <!-- game -->
-        <div id="game">
-            <img src="./img/giftbox.png" style="height: 15vw; float: left;">
-            <img src="./img/game/start png.png" style="width: 100vw;">
-            <img src="./img/game/Dice-PNG.png" style="height: 25vw;">
-        </div>
-
-        <div id="input-box">
-            <div class="input-box">Enter Chance</div>
-            <div class="input-box">Chance Left: 00</div>
-        </div>
-        <div style="text-align: center;">
-            <img src="./img/backgrounds/Roll-the-dice-btn.png" style="height: 15vw;">
-        </div>
-    </div>
-    <!-- beans pot -->
-    <div class="event-gift" id="game-zone-event-gift">
-        <div class="gift-banner">
-            <img src="./img/ribbons/Beans-Pot-tag.png" class="banner-tag">
-            <img src="./img/Bean-pot.png" style="height: 50vw;">
-            <div id="bean-count">00</div>
-            <div id="bean-pot-description">Beans pot will be rewarded to top 5 hourly users.</div>
-        </div>
-    </div>
-    <!----- action on reward ------>
-    <div class="action-strip">
-        <img src="./img/btn/Hourly-Select-btn.png">
-        <img src="./img/btn/Weekly-Select-btn.png" class="unselect-btn">
-        <img src="./img/btn/Overall-select-btn.png" class="unselect-btn">
-    </div>
-
-    <!------ reward banner ------->
-    <div id="talent-reward" class=" reward remove-reward">
-        <div class="reward-banner">
-            <img src="./img/ribbons/Rewards-tag.png" class="banner-tag">
-            <div id="hourly-reward-description">will be featured on the top of the event webpage for the next hour.<span
-                    class="highlite-text">top 2 talents</span>
-            </div>
-        </div>
-    </div>
-    <div id="game-zone-reward" class="reward">
-        <div class="reward-banner">
-            <img src="./img/ribbons/Rewards-tag.png" class="banner-tag">
-            <img src="./img/1st-rank.png" style="height: 16vw;">
-            <div id="reward-bean-pot">
-                <img src="./img/backgrounds/Left-arrow.png" style="height: 10vw;">
-                <div>
-                    <div id="bean-pot">
-                        <img src="./img/rewards/Bean-pot.png" style="height: 30vw;">
-                    </div>
-                    <b style="font-size: 4vw;">10% of the beans pot</b>
-                </div>
-                <img src="./img/backgrounds/Right-arrow.png" style="height: 10vw;">
-            </div>
+        <div id="gift-info">
+            <div id="gift-info-title">Game Rewards</div>
             <div>
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <div id="gift-rewards">
+                    <img src="./img/rewards/Lantern.png">
+                    <img src="./img/rewards/star.png">
+                    <img src="./img/rewards/royal-profile-frame.png">
+                    <img src="./img/rewards/beans.png">
+                    <img src="./img/rewards/maharaja.png">
+                </div>
             </div>
         </div>
     </div>
 
-    <!----- action on leaderboard ------>
-    <div class="action-strip">
-        <img src="./img/btn/Hourly-Select-btn.png">
-        <img src="./img/btn/Weekly-Select-btn.png" class="unselect-btn">
-        <img src="./img/btn/Overall-select-btn.png" class="unselect-btn">
-    </div>
+    <div id="main">
+        <img src="./img/btn/Guide-btn.png" id="guid-btn">
+        <img src="./img/header.jpg" id="header-img">
 
-    <!------ leaderboard banner ------->
-    <div id="leaderboard">
-        <div class="leaderboard-banner">
-            <img src="./img/ribbons/Leaderboard-tag.png" class="banner-tag">
-            <div id="brown-strip">
-                <div id="slected-btn">Current</div>
-                <div>Previous</div>
+        <!------- action tab ------->
+        <div id="top-action">
+            <img src="./img/btn/Game-zone-btn.png" id="game-zone-tab" onclick="selectGameZoneTab()">
+            <img src="./img//btn/Talent-select-btn.png" id="talent-tab" class="unselect-btn"
+                onclick="selectTalentTab()">
+        </div>
+
+        <!------- event gift banner -------->
+        <div class="event-gift remove-reward" id="talent-event-gift">
+            <div class="gift-banner">
+                <img src="./img/ribbons/Event-gift-tag.png" class="banner-tag">
+                <div id="event-gifts">
+                    <div>
+                        <img src="./img/gifts/Golden-Lion.png">
+                        <div class="gift-description">Golden Lion <br />500</div>
+                    </div>
+                    <div>
+                        <img src="./img/gifts/White-Horse.png">
+                        <div class="gift-description">White Horse <br />25,000</div>
+                    </div>
+                    <div>
+                        <img src="./img/gifts/Garden-Flower.png">
+                        <div class="gift-description">Garden Flower<br /> 100,000</div>
+                    </div>
+                </div>
             </div>
-            <!-- <div>
+        </div>
+
+        <!------ game banner ------>
+        <div id="game-box">
+            <!-- timer -->
+            <div id="timer">
+                <div id="timer-description">
+                    <div style="padding-top: 5vw;">POT BREAKING CEREMONY STARTS IN:<br />14:00 to 21:00 GMT</div>
+                </div>
+            </div>
+            <!-- game -->
+            <div id="game">
+                <img src="./img/giftbox.png" style="height: 15vw; float: left;" id="gift-box">
+                <img src="./img/game/start png.png" style="width: 100vw;" id="game-board">
+                <img src="./img/game/Dice-PNG.png" style="height: 25vw;" id='dice'>
+            </div>
+            <div id="input-box">
+                <div class="input-box">
+                    <input placeholder="Enter Choice" id="input-value" />
+                </div>
+                <div class="input-box" id="choiceLeftText">Chance Left: 100</div>
+            </div>
+            <div style="text-align: center;">
+                <img src="./img/backgrounds/Roll-the-dice-btn.png" style="height: 15vw;" onclick="diceRoll()">
+            </div>
+        </div>
+
+        <!-- game zone event gift -->
+        <div class="event-gift" id="game-zone-event-gift">
+            <div class="gift-banner">
+                <img src="./img/ribbons/Beans-Pot-tag.png" class="banner-tag">
+                <img src="./img/Bean-pot.png" style="height: 50vw;">
+                <div id="bean-count">00</div>
+                <div id="bean-pot-description">Beans pot will be rewarded to top 5 hourly users.</div>
+            </div>
+        </div>
+
+        <!----- action on reward ------>
+        <div class="action-strip">
+            <img src="./img/btn/Hourly-Select-btn.png" onclick="selectHourly('reward')" id="hourly-reward">
+            <img src="./img/btn/Weekly-Select-btn.png" onclick="selectWeekly('reward')" class="unselect-btn"
+                id="weekly-reward">
+            <img src="./img/btn/Overall-select-btn.png" onclick="selectOverall('reward')" class="unselect-btn"
+                id="overall-reward">
+        </div>
+
+        <!------ reward banner ------->
+        <div id="talent-reward" class=" reward remove-reward">
+            <div class="reward-banner">
+                <img src="./img/ribbons/Rewards-tag.png" class="banner-tag">
+                <div id="hourly-reward-description">will be featured on the top of the event webpage for the next
+                    hour.<span class="highlite-text">top 2 talents</span>
+                </div>
+            </div>
+        </div>
+        <div id="game-zone-reward" class="reward">
+            <div class="reward-banner">
+                <img src="./img/ribbons/Rewards-tag.png" class="banner-tag">
+                <img src="./img/1st-rank.png" style="height: 16vw;" id="reward-rank">
+                <div id="reward-bean-pot">
+                    <img src="./img/backgrounds/Left-arrow.png" style="height: 10vw;" onclick="onLeftClick()">
+                    <div>
+                        <div class="bean-pot" id="bean-pot">
+                            <img src="./img/rewards/Bean-pot.png" id="reward-img">
+                        </div>
+                        <div id="bean-pot-overall" style="display: none;">
+                            <div class="bean-pot-overall">
+                                <div class="bean-pot">
+                                    <img src="./img/rewards/Maharaja-Premium-rewards.png" id="reward-img">
+                                </div>
+                                <div class="bean-pot">
+                                    <img src="./img/rewards/Meastro-profile-frame.png" id="reward-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./img/backgrounds/Right-arrow.png" style="height: 10vw;" onclick="onRightClick()">
+                </div>
+                <div id="reward-des">40% of the beans pot</div>
+                <div id="slider-dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!----- action on leaderboard ------>
+        <div class="action-strip">
+            <img src="./img/btn/Hourly-Select-btn.png" onclick="selectHourly('leaderboard')" id="hourly-leaderboard">
+            <img src="./img/btn/Weekly-Select-btn.png" onclick="selectWeekly('leaderboard')" class="unselect-btn"
+                id="weekly-leaderboard">
+            <img src="./img/btn/Overall-select-btn.png" onclick="selectOverall('leaderboard')" class="unselect-btn"
+                id="overall-leaderboard">
+        </div>
+
+        <!------ leaderboard banner ------->
+        <div id="leaderboard">
+            <div class="leaderboard-banner">
+                <img src="./img/ribbons/Leaderboard-tag.png" class="banner-tag">
+                <div id="leaderboard-tab">
+                    <div id="leaderboard-strip">
+                        <div id='current-leaderboard' class="selected-btn" onclick="setCurrentLeaderboard()">Current
+                        </div>
+                        <div id='previous-leaderboard' onclick="setPreviousLeaderboard()">Previous</div>
+                    </div>
+                </div>
+                <!-- <div>
         <div id="winner-strip">
         </div>
         <div class="description">No Data Avaliable!</div>
         </div> -->
-            <div>
-                <div id="top3-winner">
-                    <div>
-                        <div id="trofi2">
-                            <img src="http://kkimg.kktv9.com/image/559110572_0_1666669734986.png!128">
-                        </div>
-                        <div style="margin-top: -4vw;">
-                            MR.barba...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
-                                style="height: 4.5vw; margin-top: 1vw;"><br />
-                            <div id="top1-des"><img src="./img/gems.png" style="height: 5vw;"><span>20,08,55,500</span>
+                <div>
+                    <div id="top3-winner">
+                        <div>
+                            <div id="trofi2">
+                                <img src="http://kkimg.kktv9.com/image/559110572_0_1666669734986.png!128">
+                            </div>
+                            <div style="margin-top: -4vw;">
+                                MR.barba...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
+                                    style="height: 4.5vw; margin-top: 1vw;"><br />
+                                <div id="top1-des"><img src="./img/gems.png"
+                                        style="height: 5vw;"><span>20,08,55,500</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div id="trofi1">
-                            <img src="http://kkimg.kktv9.com/image/620817880_0_1642081997105.png!128">
-                        </div>
-                        <div style="margin-top: -8vw;">
-                            Kabil mat ...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
-                                style="height: 4.5vw;margin-top: 1vw;"><br />
-                            <div id="top1-des"><img src="./img/gems.png" style="height: 5vw;"><span>24,00,00,000</span>
+                        <div>
+                            <div id="trofi1">
+                                <img src="http://kkimg.kktv9.com/image/620817880_0_1642081997105.png!128">
+                            </div>
+                            <div style="margin-top: -8vw;">
+                                Kabil mat ...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
+                                    style="height: 4.5vw;margin-top: 1vw;"><br />
+                                <div id="top1-des"><img src="./img/gems.png"
+                                        style="height: 5vw;"><span>24,00,00,000</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div id="trofi3">
-                            <img src="http://kkimg.kktv9.com/image/619718455_0_1664428332303.png!128">
-                        </div>
-                        <div style="margin-top: -3vw;">
-                            papa ka ma...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
-                                style="height: 4.5vw;margin-top: 1vw;"><br />
-                            <div id="top1-des"><img src="./img/gems.png" style="height: 5vw;"><span>20,08,55,500</span>
+                        <div>
+                            <div id="trofi3">
+                                <img src="http://kkimg.kktv9.com/image/619718455_0_1664428332303.png!128">
+                            </div>
+                            <div style="margin-top: -3vw;">
+                                papa ka ma...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/35.png"
+                                    style="height: 4.5vw;margin-top: 1vw;"><br />
+                                <div id="top1-des"><img src="./img/gems.png"
+                                        style="height: 5vw;"><span>20,08,55,500</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div style="margin-bottom: 8vw;">
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>4</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
-                        </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
                     </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>5</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                    <div style="margin-bottom: 8vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>4</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
-                    </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>6</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>5</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
-                    </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>7</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>6</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
-                    </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>8</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>7</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
-                    </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>9</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>8</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
-                    </div>
-                    <div class="leaderboard-strip">
-                        <div></div>
-                        <div>10</div>
-                        <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
-                            style="height: 8vw; border-radius: 50%;">
-                        <div>
-                            Bunny�...<br />
-                            <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>9</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
                         </div>
-                        <img src="./img/gems.png" style="height: 5vw;">
-                        <p> 19,82,36,000</p>
+                        <div class="leaderboard-strip">
+                            <div></div>
+                            <div>10</div>
+                            <img src="http://kkimg.kktv9.com/image/560691238_0_1602864350954.png!128"
+                                style="height: 8vw; border-radius: 50%;">
+                            <div>
+                                Bunny�...<br />
+                                <img src="http://www.streamkar.tv/streamkar/common/img/tlv/43.png" style="height: 5vw;">
+                            </div>
+                            <img src="./img/gems.png" style="height: 5vw;">
+                            <p> 19,82,36,000</p>
+                        </div>
+                        <img src="./img/btn/Moree.png" id="show-more">
                     </div>
-                    <img src="./img/btn/Moree.png" id="show-more">
                 </div>
             </div>
         </div>
-    </div>
 
-    <!------ footer ------->
-    <div id="footer">All rights Reserved by StreamKar</div>
+        <!------ footer ------->
+        <div id="footer">All rights Reserved by StreamKar</div>
+    </div>
 </body>
 
 </html>
