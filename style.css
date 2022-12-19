@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./img/backgrounds/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#header-img {
+    width: 100%;
+}
+
+#guid-btn {
+    position: fixed;
+    top: 12vw;
+    right: 0;
+    height: 8vw;
+    z-index: 3;
+}
+
+#top-action {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5vw;
+}
+
+#top-action img {
+    height: 10vw;
+}
+
+.unselect-btn {
+    filter: grayscale(1);
+}
+
+#timer {
+    background-image: url(./img/backgrounds/timer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#timer-description {
+    font-size: 3.5vw;
+    font-weight: bold;
+    background-image: url(./img/backgrounds/Count-down-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90vw;
+    height: 20vw;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+#input-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 80vw;
+    margin: 0 auto;
+    column-gap: 4vw;
+    margin-top: -3vw;
+    margin-bottom: 5vw;
+}
+
+.input-box {
+    background-image: url(./img/backgrounds/Hammers-chances-and-left-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 2vw;
+    font-size: 5vw;
+    color: white;
+    text-align: center;
+}
+
+#game {
+    background-image: url(./img/backgrounds/Game-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-bottom: 20vw;
+}
+
+.remove-reward {
+    display: none;
+}
+
+.event-gift {
+    background-image: url(./img/backgrounds/Bean-Pot-Event-Gift-rewards-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 5vw;
+}
+
+.gift-banner {
+    background-image: url(./img/backgrounds/event-gift-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 2vw;
+}
+
+.banner-tag {
+    height: 10vw;
+    display: block;
+    margin: 0 auto;
+}
+
+#event-gifts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 4vw 4vw 6vw;
+}
+
+#event-gifts img {
+    height: 20vw;
+}
+
+.gift-description {
+    font-weight: bold;
+    font-size: 4vw;
+    margin-top: 3vw;
+}
+
+#bean-count {
+    position: relative;
+    top: -10vw;
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+}
+
+#bean-pot-description {
+    font-size: 4.5vw;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto 5vw;
+}
+
+.action-strip {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-image: url(./img/backgrounds/Count-down-bg-new.png);
+    background-repeat: no-repeat;
+    justify-content: space-around;
+    padding: 3vw 0;
+    background-size: 100% 100%;
+}
+
+.action-strip img {
+    height: 10vw;
+}
+
+#reward {
+    background-image: url(./img/backgrounds/Bean-Pot-Event-Gift-rewards-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 8vw 0;
+}
+
+.reward-banner {
+    background-image: url(./img/backgrounds/event-gift-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 2vw;
+    margin: 5vw 0;
+}
+
+#reward-bean-pot {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.dot {
+    cursor: pointer;
+    height: 2vw;
+    width: 2vw;
+    background-color: rgb(221, 207, 144);
+    display: inline-block;
+    margin: 2vw auto 4vw;
+    border-radius: 50%;
+    transition: background-color 0.6s ease 0s;
+}
+
+.active {
+    background-color: #6403039e;
+}
+
+#bean-pot {
+    background-image: url(./img/backgrounds/bg_rewards.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35vw;
+}
+
+.highlite-text {
+    color: #580303;
+}
+
+#hourly-reward-description {
+    font-weight: bold;
+    font-size: 4vw;
+    font-style: italic;
+    padding: 15vw 5vw 18vw;
+}
+
+#leaderboard {
+    background-image: url(./img/backgrounds/Leaderboard-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 10vw;
+}
+
+.leaderboard-banner {
+    background-image: url(./img/backgrounds/Leaderboard-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 4vw;
+    min-height: 60vw;
+}
+
+#brown-strip {
+    background-image: url(./img/backgrounds/brownStrip.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 75vw;
+    margin: 0 auto;
+    color: white;
+    align-items: center;
+    margin-top: 3vw;
+    text-shadow: 1px 1px 0 #5885bb, 1px 1px 0 #5885bb, 1px 1px 0 #5885bb, 1px 1px 0 #5885bb;
+    font-size: 8vw;
+}
+
+#slected-btn {
+    background-image: url(./img/backgrounds/blueBtn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 2vw;
+}
+
+#winner-strip {
+    background-image: url(./img/backgrounds/Winner-stage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    height: 9vw;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3vw;
+}
+
+.description {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    text-align: start;
+    font-size: 5vw;
+
+}
+
+#footer {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8vw 0;
+    font-size: 5vw;
+}
+
+#top3-winner {
+    background-image: url(./img/backgrounds/Winner-stage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    width: 90vw;
+    height: 35vw;
+    margin: 0 auto;
+    display: grid;
+    color: white;
+    grid-template-columns: 30% 30% 30%;
+    font-size: 3vw;
+    justify-content: space-around;
+    padding-bottom: 20vw;
+    position: relative;
+    top: 20vw;
+}
+
+#top1-des {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#trofi2 {
+    background-image: url(./img/backgrounds/2ndFrame.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 25vw;
+    position: relative;
+    top: -10vw;
+}
+
+#trofi2 img,
+#trofi1 img,
+#trofi3 img {
+    height: 12vw;
+    position: relative;
+    top: 5vw;
+    border-radius: 50%;
+}
+
+#trofi1 {
+    background-image: url(./img/backgrounds/1stFrame.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 25vw;
+    position: relative;
+    top: -16vw;
+}
+
+#trofi3 {
+    background-image: url(./img/backgrounds/3rdFrame.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 18vw;
+    width: 25vw;
+    position: relative;
+    top: -7vw;
+}
+
+.leaderboard-strip {
+    background-image: url(./img/backgrounds/Leaderboard-strip.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7% 5% 12% 40% 5% 30%;
+    font-size: 4vw;
+    color: white;
+    padding: 1vw 0;
+    align-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+#show-more {
+    height: 12vw;
+}
