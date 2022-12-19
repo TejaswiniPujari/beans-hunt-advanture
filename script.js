@@ -23,6 +23,10 @@ function diceRoll() {
         alert('Please enter value');
         return;
     }
+    if (inputValue.value>6 || inputValue.value<1 ) {
+        alert('Enter value between 1 to 6');
+        return;
+    }
     gameBoard.src = "./img/game/start png.png";
     choice = choice - 1;
     dice.src = './img/game/Dice Forever.gif';
